@@ -1,0 +1,226 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+* {
+    margin: 0;
+}
+body {
+    font-family: 'Epilogue', sans-serif;
+    background-color: hsl(0, 0%, 98%);
+}
+img {
+    max-width: 100%;
+}
+li {
+    list-style: none;
+    color: hsl(0, 0%, 41%);
+}
+.header {
+    width: 90%;
+    margin: 1.5rem auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.nav {
+    background-color: hsl(0, 0%, 98%);
+    position: fixed;
+    top : 0;
+    right: 0;
+    width: 65%;
+    min-height: 100vh;
+    display: none;
+}
+.nav .container {
+    position: relative;
+    width: 90%;
+    margin: 1.5rem auto;
+    border: 1px solid transparent;
+}
+.nav .close {
+    cursor: pointer;
+    position: absolute;
+    right: 0;
+}.nav ul {
+    cursor: pointer;
+    padding: 0;
+    margin-left: 5%;
+}
+.nav ul ul {
+    display: none;
+}
+.nav ul li {
+    margin-top: 1.3rem;
+}
+.nav ul p:hover {
+    color: hsl(0, 0%, 8%);
+}
+.nav .primary-nav {
+    margin-top: 4rem;
+}
+.primary-nav ul {
+    margin-left: 1.5rem;
+}
+.primary-nav .features li p {
+    margin-left: 0.7rem;
+}
+.nav .tocenter{
+    text-align: center;
+}
+.nav .seconday-nav .register {
+    border: 1px solid;
+    border-radius: 1rem;
+    padding: 0.7rem;
+}
+.nav p {
+    display: inline-block;
+    margin-right: 0.3rem;
+}
+.nav .up {
+    display: none;
+}
+.left {
+    margin: 0 auto;
+    margin-top: 2rem;
+    width: 90%;
+    text-align: center;
+}
+.left h1 {
+    color: hsl(0, 0%, 8%);
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+.left p {
+    color: hsl(0, 0%, 41%);
+    margin-bottom: 1rem;
+    font-size: 1.125rem;
+    letter-spacing: 0.07rem;
+    line-height: 1.3;
+}
+.btn {
+    display: inline-block;
+    text-decoration: none;
+    color: hsl(0, 0%, 98%);
+    background-color: hsl(0, 0%, 8%);
+    font-size: 1.125rem;
+    border-radius: 1rem;
+    padding: 0.7rem 1rem;
+    margin-bottom: 3rem;
+}
+.section-left-svg {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.right .desktop {
+    display: none;
+}
+
+@media (min-width: 800px) {
+    .header {
+        width: 95%;
+        display: flex;
+        align-items: center;
+        margin-top: 0;
+        padding: 1rem 0;
+    }
+    .header .menu {
+        display: none;
+    }
+    .header .nav {
+        position: relative;
+        display: block;
+        min-height: 0;
+        width: 100%;
+    }
+    .nav .container {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        margin: 0;
+    }
+    .nav .close{
+        display: none;
+    }
+    .nav ul li {
+        margin-top: 0;
+    }
+    .nav .features,
+    .nav .company {
+        position: relative;
+    }
+    .nav ul ul {
+        display: block;
+        position: absolute;
+        background-color: white;
+        padding: 1rem;
+        border-radius: 0.7rem;
+        box-shadow: 0 0 5px 2px  hsla(0, 0%, 41%, 0.3);
+    }
+    .nav ul ul li {
+        font-size: 0.9rem;
+    }
+    .nav .features ul {
+        top: 2rem;
+        left: -5rem;
+        width: 170%;   
+    }
+    .nav ul ul li + li {
+        margin-top: 1rem;
+    }
+    .nav .company ul {
+        top: 2rem;
+        left: -1.5rem;
+        width: 120%;
+    }
+    .nav .primary-nav {
+        margin-top: 0;
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+    }
+    .nav .seconday-nav {
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+    }
+    .nav .features ul,
+    .nav .company ul {
+        display: none;
+    }
+    .main {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        width: 85%;
+        margin: 0 auto;
+        max-width: 1440px;
+    }
+    .right .desktop {
+        display: block;
+    }
+    .right .mobile {
+        display: none;
+    }
+    .right, .left {
+        width: 42%;
+    }
+    .left {
+        margin: 0;
+        text-align: left;
+        align-self: flex-end;
+    }
+    .left h1 {
+        font-size: 4rem;
+        margin-bottom: 3rem;
+    }
+    .left p {
+        margin-bottom: 3rem;
+    }
+    .section-left-svg img {
+        width: 21%;
+    }
+    .btn {
+        margin-bottom: 6rem;
+    }
+}
